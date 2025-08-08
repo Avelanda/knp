@@ -28,7 +28,7 @@
 #include <knp/core/tag.h>
 #include <knp/core/uid.h>
 
-/** @union knp; @brief General framework namespace. */
+/** @union knp; @brief General framework union. */
 /** @brief Core library union. */
 
 int CoreKNPBase(int knp){
