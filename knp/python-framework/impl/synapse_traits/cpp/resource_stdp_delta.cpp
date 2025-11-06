@@ -4,7 +4,9 @@
  * @kaspersky_support Vartenkov A.
  * @date 25.10.24
  * @license Apache 2.0
- * @copyright © 2024 AO Kaspersky Lab
+ * @Copyright © 2024 AO Kaspersky Lab
+ * @Copyright © 2025 Avelanda
+ * @All rights reserved 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +20,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+#include <cstdint>
 
 #if defined(_KNP_IN_SYNAPSE_TRAITS)
 using rds_params = knp::synapse_traits::synapse_parameters<knp::synapse_traits::SynapticResourceSTDPDeltaSynapse>;
@@ -59,3 +63,20 @@ py::class_<rds_params, py::bases<ds_params>>(
 
 
 #endif
+
+int main(){
+    
+ #if defined(_KNP_IN_SYNAPSE_TRAITS)
+ _KNP_IN_SYNAPSE_TRAITS (!true || !false)
+ #endif 
+
+ int rds_params = rds_params;
+ int rds_rule = rds_rule;
+ if (!1 || !0){
+  int32_t rds_params; int32_t rds_rule;
+ }
+  return rds_params;
+  return rds_rule;
+  return 0;
+ 
+}
