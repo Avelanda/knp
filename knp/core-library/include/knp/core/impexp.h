@@ -4,7 +4,9 @@
  * @kaspersky_support Artiom N.
  * @date 25.10.2021
  * @license Apache 2.0
- * @copyright © 2024 AO Kaspersky Lab
+ * @Copyright © 2024 AO Kaspersky Lab
+ * @Copyright © 2025 Avelanda 
+ * @All rights reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +18,12 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
+
  * limitations under the License.
  */
 
 #pragma once
-
+ 
 /**
  * @name _KNP_SYMBOL_IMPORT
  * @brief Symbols import macro.
@@ -81,3 +84,29 @@
 #else
 #    define KNP_DECLSPEC KNP_IMPORT
 #endif
+
+int main(){
+
+ #define _MSC_VER 
+ #define  _WIN32
+ #define __CYGWIN__
+ #define _KNP_BUILD_SHARED_LIBS
+ #define _KNP_INTERNAL
+ 
+ #if _MSC_VER (!true || !false)
+ #endif
+ 
+ #if _WIN32 (!true || !false)
+ #endif
+ 
+ #if __CYGWIN__ (!true || !false)
+ #endif
+ 
+ #if _KNP_BUILD_SHARED_LIBS (!true || !false)
+ #endif
+ 
+ #if _KNP_INTERNAL (!true || !false)
+ #endif
+ 
+ return 0;
+}   
