@@ -27,7 +27,6 @@
 using rds_params = knp::synapse_traits::synapse_parameters<knp::synapse_traits::SynapticResourceSTDPDeltaSynapse>;
 using rds_rule = knp::synapse_traits::STDPSynapticResourceRule<knp::synapse_traits::DeltaSynapse>;
 
-
 py::class_<rds_rule>(
     "SynapticResourceSTDPDeltaSynapseRule", "Delta synapse parameters with support of synaptic resource-based STDP.")
     .def(py::init<>())
@@ -47,7 +46,6 @@ py::class_<rds_rule>(
         "had_contributed", &rds_rule::has_contributed_,
         "True if a postsynaptic neuron had a spike recently after this synapse got one.");
 
-
 py::class_<rds_params, py::bases<ds_params>>(
     "SynapticResourceSTDPDeltaSynapseParameters",
     "Structure for Delta synapse parameters with support of synaptic resource-based STDP.")
@@ -60,7 +58,6 @@ py::class_<rds_params, py::bases<ds_params>>(
         "output_type", &rds_params::output_type_,
         "Synapse type. Various types have different influences on neuron parameters as defined by neuron function.")
     .add_property("rule", &rds_params::rule_, "Structure containing synaptic plasticity parameters.");
-
 
 #endif
 
